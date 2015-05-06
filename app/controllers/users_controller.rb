@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
     	flash[:success] = "Welcome to WynkedIn!"
-      redirect_to @user
+      redirect_to @user.profile
     else
       render 'new'
     end

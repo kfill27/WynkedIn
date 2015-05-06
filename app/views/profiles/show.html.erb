@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>User:</strong>
+  <%= @profile.user %>
+  <%= image_tag @profile.user.profile_pic.url(:medium) %>
+</p>
+
+<%= link_to 'Back', profiles_path %>
+
+
+
+
+<% if @profile == current_user.profile %>
+	<%= render 'form' %>
+<% end %>
