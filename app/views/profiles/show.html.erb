@@ -39,8 +39,7 @@
 	</div>
 
 <div class="container well">
-<h2> To update your profile: </h2>
-	<% if @profile == current_user.profile %>
+	<% if current_user != nil && @profile == current_user.profile %>
 			<%= render 'form' %>
 		<% end %>
 </div>
