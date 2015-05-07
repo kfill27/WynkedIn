@@ -7,23 +7,33 @@
 			<div class="col-md-4">
 				<%= image_tag @profile.user.profile_pic.url(:medium) %>
 				<ul class="list-unstyled list-inline">
-					<li><i class="social fa fa-github fa-3x"></i></li>
-					<li><i class="social fa fa-linkedin fa-3x"></i></li>
-					<li><i class="social fa fa-twitter fa-3x"></i></li>
-					<li><i class="fa fa-envelope-o fa-3x"></i></li>
+					<li><%= link_to @profile.github, :target => "_blank" do %>
+
+						<i class="social fa fa-github fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= link_to @profile.linkedin, :target => "_blank" do %>
+						<i class="social fa fa-linkedin fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= link_to @profile.twitter, :target => "_blank" do %>
+						<i class="social fa fa-twitter fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= mail_to @profile.email do %>
+						<i class="fa fa-envelope-o fa-2x"></i>
+						<%end%>
+						</li>
 				</ul>
 			</div>
 			<div class="col-md-8">
-				<h1> <%= @profile.user %> </h1>
-				<h3>Cohort #:</h3>
-				<p>Lorem ipsum dolor sit amet</p>
+				<h1> <%= @profile.user.name %> </h1>
+				<h3>Cohort #:</h3> 
+				<p><%= @profile.cohort %></p>
 				<h3>Place of Employment:</h3>
-				<p>Consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p><%= @profile.job %></p>
 				<h3>Bio:</h3>
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p><%= @profile.bio %></p>
 			</div>
 		</div>
 	</div>

@@ -48,6 +48,10 @@ h1 {
 .social {
 	padding: 15px;
 }
+
+#notice {
+	color: #c5d38d;
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -75,6 +79,7 @@ input {
 	color: #fff;
 	background-color: #333;
 }
+
 
 
 

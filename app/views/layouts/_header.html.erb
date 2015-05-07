@@ -7,12 +7,13 @@
 
         <ul class="nav nav-pills navbar-right">
           <% if logged_in? %>
-          <li role="presentation" class="active"><%= link_to "All Profiles", profiles_path %></li>
+          <li role="presentation"><%= link_to "All Profiles", profiles_path %></li>
           <li role="presentation"><%= link_to "My Profile", current_user.profile %></li>
           <li role="presentation"><%= link_to "Log out", logout_path, method: "delete" %></li>
         </ul>
         <% else %>
         <ul class="nav nav-pills navbar-right">
+          <li role="presentation" class="active"><%= link_to "Sign Up", signup_path %></li>
           <li role="presentation" class="active"><%= link_to "Log in", login_path %></li>
           <% end %>
         </ul>
