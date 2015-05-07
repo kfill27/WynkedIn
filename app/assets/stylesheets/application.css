@@ -45,6 +45,34 @@ h1 {
 	letter-spacing: 1px;
 }
 
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #03d1fc;
+	margin: 15px 5px;
+}
+
+.nav-pills a{
+	color: #4d4d4d;
+	margin: 15px 5px;
+}
+
+#logo {
+	font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #03d1fc;
+  text-decoration: none;
+}
+
+.thumbnail {
+	height: 265px;
+}
+
+.btn-primary {
+	background-color: #03d1fc;
+	border: none;
+}
+
+
 .social {
 	padding: 15px;
 }
@@ -79,7 +107,6 @@ input {
 	color: #fff;
 	background-color: #333;
 }
-
 
 
 
