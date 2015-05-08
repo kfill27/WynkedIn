@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 	def show
     @user = User.find(params[:id])
+    @user_name = User.find(params[:name])
   end
 
   def new
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
     	flash[:success] = "Welcome to WynkedIn!"
-      redirect_to @user
+      redirect_to @user.profile
     else
       render 'new'
     end

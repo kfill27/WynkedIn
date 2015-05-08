@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+	<div class="container well">
+		<%= link_to 'All Profiles', profiles_path %>
+
+		
+		<div class="row">
+			<div class="col-md-4">
+				<%= image_tag @profile.user.profile_pic.url(:medium) %>
+				<ul class="list-unstyled list-inline">
+					<li><%= link_to @profile.github, :target => "_blank" do %>
+
+						<i class="social fa fa-github fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= link_to @profile.linkedin, :target => "_blank" do %>
+						<i class="social fa fa-linkedin fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= link_to @profile.twitter, :target => "_blank" do %>
+						<i class="social fa fa-twitter fa-2x"></i>
+						<%end%>
+					</li>
+					<li><%= mail_to @profile.email do %>
+						<i class="fa fa-envelope-o fa-2x"></i>
+						<%end%>
+						</li>
+				</ul>
+			</div>
+			<div class="col-md-8">
+				<h1> <%= @profile.user.name %> </h1>
+				<h3>Cohort #:</h3> 
+				<p><%= @profile.cohort %></p>
+				<h3>Place of Employment:</h3>
+				<p><%= @profile.job %></p>
+				<h3>Bio:</h3>
+				<p><%= @profile.bio %></p>
+			</div>
+		</div>
+	</div>
+
+<div class="container well">
+	<% if current_user != nil && @profile == current_user.profile %>
+			<%= render 'form' %>
+		<% end %>
+</div>

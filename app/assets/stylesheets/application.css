@@ -14,15 +14,100 @@
  *= require_self
  */
 
+
+ /*
+ Wyncode Colors
+
+ wyncode-blue: #03d1fc
+ wyncode-red: #fa696f
+ wyncode-green: #c5d38d
+ wyncode-black: #4d4d4d
+ wyncode-grey: #888
+ wyncode-light-grey: #eee
+ wyncode-yellow: #ffcc66
+ */
+
+body {
+	padding-top: 100px;
+	font-family: 'Rajdhani', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+}
+
+h1, h2 {
+	text-align: center;
+	font-family: 'Rajdhani', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #03d1fc;
+	margin: 15px 5px;
+}
+
+.nav-pills a{
+	color: #4d4d4d;
+	margin: 15px 5px;
+}
+
+#logo {
+	font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #03d1fc;
+  text-decoration: none;
+}
+
+.thumbnail {
+	height: 265px;
+}
+
+.btn-primary {
+	background-color: #03d1fc;
+	border: none;
+}
+
+
+.social {
+	padding: 15px;
+}
+
+#notice {
+	color: #c5d38d;
+}
 /* forms */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
 }
 
 input {
   height: auto !important;
 }
+
+/* Profiles Index Page*/
+.thumbnail > img {
+	padding: 20px;
+}
+/* Profiles */
+
+
+/* Footer */
+
+.footer {
+	height: 100px;
+	text-align: center;
+	color: #fff;
+	background-color: #333;
+}
+
+
+
+

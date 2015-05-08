@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class= "text-center">Meet Our Wyncoders</h1>
+  <div class="container">
+  <div class="row">
+    <% @profiles.each do |profile| %>
+    <div class="col-xs-6 col-md-3">
+      <div class="thumbnail">
+        <%= image_tag profile.profile_pic.url(:thumb) %>
+        <div class="caption">
+          <h2> <%= profile.user.name %> </h2>
+          <%= button_to 'Show Profile', profile, :class => "btn btn-primary", :method => :get %>
+        </div> 
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
