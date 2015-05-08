@@ -74,6 +74,11 @@ button#modal-button {
 	height: 265px;
 }
 
+.thumbnail img {
+	max-height: 100px;
+  max-width: 100px;
+}
+
 .btn-primary {
 	background-color: #03d1fc;
 	border: none;
