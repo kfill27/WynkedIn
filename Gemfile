@@ -7,7 +7,7 @@ gem 'rails', '4.2.1'
 gem 'rails_12factor'
 
 #Add AWS S3 SDK
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 #Add PaperClip gem
 gem 'paperclip', '~> 4.2'
