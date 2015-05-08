@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-  <h2> Update Your Profile:</h2>
+  <div class="container">
+
+<button type="button" class="btn btn-info text-center" id="profile-toggle" data-toggle="collapse" data-target="#update_profile"><i class="fa fa-caret-down fa-2x">Update Your Profile</i></button>
+
+<div id="update_profile" class="collapse">
   <div class="field">
     <%= f.file_field :profile_pic %>
   </div>
@@ -57,4 +61,6 @@
 
   <div class="delete_profile">
   </div>
+</div>
+</div>
 <% end %>
