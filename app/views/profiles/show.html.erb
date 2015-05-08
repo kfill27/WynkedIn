@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
 	<div class="container well">
-		<%= link_to 'All Profiles', profiles_path %>
+		<%= link_to 'Back to All Profiles', profiles_path %>
 
-		
 		<div class="row">
 			<div class="col-md-4">
-				<%= image_tag @profile.user.profile_pic.url(:medium) %>
+				<%= image_tag @profile.user.profile_pic.url(:medium), :id => 'placeholder-profile' %>
 				<ul class="list-unstyled list-inline">
 					<li><%= link_to @profile.github, :target => "_blank" do %>
-
 						<i class="social fa fa-github fa-2x"></i>
 						<%end%>
 					</li>
@@ -21,7 +19,7 @@
 						<%end%>
 					</li>
 					<li><%= mail_to @profile.email do %>
-						<i class="fa fa-envelope-o fa-2x"></i>
+						<i class="social fa fa-envelope-o fa-2x"></i>
 						<%end%>
 						</li>
 				</ul>
@@ -38,7 +36,7 @@
 		</div>
 	</div>
 
-<div class="container well">
+<div class="container">
 	<% if current_user != nil && @profile == current_user.profile %>
 			<%= render 'form' %>
 		<% end %>
