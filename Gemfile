@@ -6,6 +6,9 @@ gem 'rails', '4.2.1'
 #Rails 12 Factor
 gem 'rails_12factor'
 
+#Add AWS S3 SDK
+gem 'aws-sdk'
+
 #Add PaperClip gem
 gem 'paperclip', '~> 4.2'
 
@@ -19,7 +22,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'puma', '2.11.1'
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
